@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { DollarSign } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -33,9 +34,16 @@ const Header = () => {
         </nav>
 
         {/* CTA */}
-        <Button className="btn-primary">
-          Join Waitlist
-        </Button>
+        <div className="flex items-center gap-3">
+          <Link to="/dashboard">
+            <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
+              Dashboard
+            </Button>
+          </Link>
+          <Button className="btn-primary">
+            Join Waitlist
+          </Button>
+        </div>
       </div>
     </motion.header>
   );
